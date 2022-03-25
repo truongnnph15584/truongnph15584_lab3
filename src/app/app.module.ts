@@ -4,22 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './login/login.component';
-import { ProductsComponent } from './products/products.component';
-import { UsersComponent } from './users/users.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LayoutComponent } from './layouts/layout/layout.component';
+import { HomeComponent } from './screens/home/home.component';
+import { ShopComponent } from './screens/shop/shop.component';
+import { ContactComponent } from './screens/contact/contact.component';
+import { AboutComponent } from './screens/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    ProductsComponent,
-    UsersComponent
+    LayoutComponent,
+    HomeComponent,
+    ShopComponent,
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

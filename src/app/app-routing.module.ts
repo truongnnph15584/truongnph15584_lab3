@@ -1,22 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { ProductsComponent } from './products/products.component';
-import { UsersComponent } from './users/users.component';
+import { LayoutComponent } from './layouts/layout/layout.component';
+import { AboutComponent } from './screens/about/about.component';
+import { ContactComponent } from './screens/contact/contact.component';
+import { HomeComponent } from './screens/home/home.component';
+import { ShopComponent } from './screens/shop/shop.component';
 const routes: Routes = [
-   {
-     path:"",
-     component: AppComponent
-   },
   {
-    path:"products",
-    component: ProductsComponent
-  },
-  {
-    path:"users",
-    component:UsersComponent
+    path:"",
+    component:LayoutComponent,
+    children:[
+      {
+        path:"",
+        component:HomeComponent
+      },
+      {
+        path:"shop",
+        component:ShopComponent
+      },
+      {
+        path:"contact",
+        component:ContactComponent
+      },
+      {
+        path:"about",
+        component:AboutComponent
+      }
+    ]
   }
-
 ];
 
 @NgModule({
